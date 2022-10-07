@@ -16,12 +16,11 @@ namespace Software2KnowledgeCheck1
         public void CreateApartment(Apartment apartment)
         {
             // Get materials
-            var materialRepo = new MaterialsRepo();
-            var materialsNeeded = materialRepo.GetMaterials();
+            var materialsNeeded = MaterialsRepo.GetMaterials();
 
             var permitRepo = new ZoningAndPermitRepo();
 
-            var buildingWasMade = ConstructBuilding<Apartment>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
+            var buildingWasMade = Construction.ConstructBuilding<Apartment>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
 
             if (buildingWasMade)
             {

@@ -12,31 +12,6 @@ namespace Software2KnowledgeCheck1
 
         public int StreetNumber { get; set; }
 
-        public static bool ConstructBuilding(List<string> materials, bool permit, bool zoning)
-        {
-            if (permit && zoning)
-            {
-                foreach (var material in materials)
-                {
-                    if (material == "concrete")
-                    {
-                        // start laying foundation
-                    }
-                    else if (material == "Steel")
-                    {
-                        // Start building structure
-                    }
-                    // etc etc...
-
-                }
-                return true;
-            }
-            else
-            {
-                return false;
-            }
-        }
-
         public static Building Add()
         {
             Building building = new Building();
