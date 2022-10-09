@@ -4,10 +4,6 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-//Using SOLID principles, refactor the City class to follow best practices.
-//The City class should only have properties.
-//You will need to make a new class to contain the logic dealing with construction.
-
 namespace Software2KnowledgeCheck1
 {
     internal class City
@@ -18,5 +14,14 @@ namespace Software2KnowledgeCheck1
         public int Population { get; set; }
 
         public List<Building> Buildings { get; } = new List<Building>();
+
+        /*public City(int zipCode, string name, string state, int population, List<Building> buildings)
+        {
+            ZipCode = zipCode;
+            Name = name;
+            State = state;
+            Population = population;
+            Buildings = buildings;
+        }*/
     }
 }
