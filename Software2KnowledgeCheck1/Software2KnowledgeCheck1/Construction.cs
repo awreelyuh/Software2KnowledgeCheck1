@@ -15,7 +15,11 @@ namespace Software2KnowledgeCheck1
 
         public static bool ConstructBuilding<T>(List<string> materials, bool permit, bool zoning) where T : Building
         {
-            if (permit && zoning)
+            if (!permit && !zoning)
+            {
+                throw new ArgumentException("Permit and zoning approval are both required.");
+            }
+            else
             {
                 foreach (var material in materials)
                 {
@@ -28,13 +32,8 @@ namespace Software2KnowledgeCheck1
                         // Start building structure
                     }
                     // etc etc...
-
                 }
                 return true;
-            }
-            else
-            {
-                return false;
             }
         }
     }
