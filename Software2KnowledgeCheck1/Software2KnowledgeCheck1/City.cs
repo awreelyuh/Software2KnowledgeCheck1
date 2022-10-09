@@ -14,14 +14,5 @@ namespace Software2KnowledgeCheck1
         public int Population { get; set; }
 
         public List<Building> Buildings { get; } = new List<Building>();
-
-        /*public City(int zipCode, string name, string state, int population, List<Building> buildings)
-        {
-            ZipCode = zipCode;
-            Name = name;
-            State = state;
-            Population = population;
-            Buildings = buildings;
-        }*/
     }
 }
