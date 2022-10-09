@@ -11,7 +11,7 @@ namespace Software2KnowledgeCheck1
         public List<string> Materials { get; set; }
         public int PermitNumber { get; set; }
         public string ZoningCode { get; set; }
-        public Building ConstructionType { get; set; }
+        public Building BuildingType { get; set; }
 
         public static bool ConstructBuilding<T>(List<string> materials, bool permit, bool zoning) where T : Building
         {

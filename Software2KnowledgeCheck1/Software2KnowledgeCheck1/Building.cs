@@ -12,18 +12,18 @@ namespace Software2KnowledgeCheck1
 
         public int StreetNumber { get; set; }
 
-        public void Create<T>(Building building)
+        public static void CreateBuilding<T>(T buildingType) where T : Building
         {
             // Get materials
             var materialsNeeded = MaterialsRepo.GetMaterials();
 
             var permitRepo = new ZoningAndPermitRepo();
 
-            var buildingWasMade = Construction.ConstructBuilding<Building>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
+            var buildingWasMade = Construction.ConstructBuilding<T>(materialsNeeded, permitRepo.GetPermit(), permitRepo.ZoningApproves());
 
             if (buildingWasMade)
             {
-                BuildingsRepo.Add(building);
+                BuildingsRepo.Add(buildingType);
             }
         }
     }
